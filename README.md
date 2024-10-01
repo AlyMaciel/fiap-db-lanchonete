@@ -2,6 +2,7 @@
 
 Este repositório foi criado com o propósito de descrever e informar sobre o tipo de base de dados escolhido pela equipe de desenvolvimento. Nosso objetivo durante o processo de elaboração da base de dados foi resolver o problema de negócio de uma lanchonete que gostaria de automatizar parte do seu serviço. Levando em consideração que eles querem que a infraestrutura do sistema seja mantida por cada uma das filiais, a fim de atribuir a responsabilidade e os gastos da infra fora do escopo da matriz.
 
+
 ### Pontos cruciais que foram levados em consideração para a decisão.
 
 1. Temos toda a estrutura de dados necessária para o funcionamento do sistema.
