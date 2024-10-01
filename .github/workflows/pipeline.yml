@@ -45,9 +45,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         if: github.event_name == 'pull_request'
-        run: terraform plan \
-          -var="username=${{ secrets.DB_USERNAME }}" \
-          -var="password=${{ secrets.DB_PASSWORD }}"
+        run: terraform plan -var="username=${{ secrets.DB_USERNAME }}" -var="password=${{ secrets.DB_PASSWORD }}"
 
       - name: Update Pull Request
         uses: actions/github-script@v6
@@ -85,6 +83,4 @@ jobs:
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve \
-          -var="username=${{ secrets.DB_USERNAME }}" \
-          -var="password=${{ secrets.DB_PASSWORD }}"
+        run: terraform apply -auto-approve -var="username=${{ secrets.DB_USERNAME }}" -var="password=${{ secrets.DB_PASSWORD }}"
