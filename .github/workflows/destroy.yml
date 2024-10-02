@@ -39,4 +39,4 @@ jobs:
 
       - name: Terraform Destroy
         id: destroy
-        run: terraform destroy -var="username=${{ secrets.DB_USERNAME }}" -var="password=${{ secrets.DB_PASSWORD }}"
+        run: terraform destroy -auto-approve -var="username=${{ secrets.DB_USERNAME }}" -var="password=${{ secrets.DB_PASSWORD }}"
